@@ -1,0 +1,559 @@
+<html>
+<head>
+<meta charset = "uft-8"></meta>
+<style>
+body, html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Arial', sans-serif;
+	background-image: url("fon.jpg");
+	color: #333;
+	text-align: center;
+}
+#he{
+	position: absolute;
+	margin-top: 30px;
+	left: 33%;
+	color: white;
+	-webkit-text-stroke: 1.5px #46679c;
+}
+#user{ 
+	background-color: #fff; 
+	padding: 20px; 
+	border-radius: 8px; 
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+	position: absolute;
+	top: 115px;
+	bottom: 4%;
+	left: 3%;
+	right: 3%;
+}
+#answer{ 
+	padding: 12px; 
+	font-size: 1.2em; 
+	width: 120px; 
+	border: 1px solid #ccc; 
+	border-radius: 4px; 
+}
+#que{
+	font-size: 1.2em; 
+}
+#result{ 
+	font-size: 1.2em; 
+	margin-top: 15px; 
+}
+#proverka{
+	padding: 12px 24px; 
+	font-size: 1.2em; 
+	background-color: #46679c; 
+	color: white; 
+	border: none; 
+	border-radius: 4px; 
+	cursor: pointer; 
+	transition: background-color 0.3s ease; 
+}
+#proverka:hover{
+	background-color: #36578c; 
+}
+#new{
+	padding: 12px 24px; 
+	font-size: 1.2em; 
+	background-color: #46679c; 
+	color: white; 
+	border: none; 
+	border-radius: 4px; 
+	cursor: pointer; 
+	transition: background-color 0.3s ease; 
+}
+#new:hover{
+	background-color: #36578c; 
+}
+#menu{
+	position: absolute;
+	height: 64px;
+	width: 64px;
+	left: 0px;
+	top: 20px;
+	background-image: url("stron.png"); 
+	color: black;
+	border: none;
+	font-size: 30px;
+	cursor: pointer; 
+}
+#me{
+	position: absolute;
+	top: 121px;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 1;
+	background-color: #819CC7; 
+	border: 1px solid;
+	border-top: 0px;
+}
+#one{
+	position: absolute;
+	height: 50px;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: rgba(0,0,0,0); 
+	color: black;
+	border-radius: 0px; 
+	border: none;
+}
+#two{
+	height: 50px;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	background-color: rgba(0,0,0,0); 
+	color: white;
+	border-radius: 0px; 
+	border: none;
+}
+#three{
+	height: 50px;
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	width: 100%;
+	background-color: rgba(0,0,0,0); 
+	color: white;
+	border-radius: 0px; 
+	border: none;
+}
+#four{
+	height: 50px;
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	width: 100%;
+	background-color: rgba(0,0,0,0); 
+	color: white;
+	border-radius: 0px; 
+	border: none;
+}
+#in{
+	position: absolute;
+	height: 50px;
+	width: 100px;
+	right: 0.5%;
+	top: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	background-color: #A1D7FE; 
+	color: #57A4FF; 
+	border: 3px solid #57A4FF; 
+	border-radius: 4px; 
+	cursor: pointer; 
+	transition: background-color 0.3s ease; 
+}
+#openin{
+	display: none;
+	position: absolute;
+	margin: -225px 0 0 -150px; 
+	left: 50%;
+	top: 50%;
+	height: 450px;
+	width: 300px;
+	background-color: #A1BCE7;
+	z-index: 3;
+	border: 2px solid #333;
+}
+#hea{
+	width: 100%;
+	height: 100px;
+	background-color: rgba(0,0,0,0.2);
+	border: none;
+	font-size: 18px;
+	color: white;
+}
+#clhea{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border: 2px solid #333;
+	border-top: 0px;
+	border-right: 0px;
+	color: white;
+	background-color: #46679c; 
+	cursor: pointer; 
+}
+#reg{
+	position: relative;
+	top: 30px;
+	width: 200px;
+	height: 30px;
+	background-color: #FFFFFF;
+	border: none;
+}
+#vhod{
+	position: relative;
+	top: 30px;
+	width: 200px;
+	height: 30px;
+	background-color: #FFFFFF;
+	border: none;
+}
+#butreg{
+	height: 50px;
+	width: 150px;
+	position: relative;
+	top: 60px;
+	background-color: #46679c; 
+	color: white; 
+	border: 1px solid #333; 
+	border-radius: 4px; 
+	cursor: pointer; 
+	transition: background-color 0.3s ease; 
+}
+#butreghover{
+	background-color: #36578c; 
+}
+#butvh{
+	position: relative;
+	top: 60px;
+	height: 50px;
+	width: 150px;
+	background-color: #46679c; 
+	color: white; 
+	border: 1px solid #333; 
+	border-radius: 4px; 
+	cursor: pointer; 
+	transition: background-color 0.3s ease; 
+}
+#registr{
+	width: 300px;
+	height: 175px;
+	border-bottom: 1px solid;
+}
+#regfon{
+	position: absolute;
+	top: 0px;
+	display: none;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.4);
+}
+#polzov{
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 15%;
+	height: 100%;
+}
+#profile{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 116%;
+	height: 120px;
+	border: 1px solid;
+	background-color: #46679c;
+	border-bottom-right-radius: 35px;
+}
+#push{
+	height: 75px;
+	width: 75px;
+	border-radius: 100px;
+	z-index: 100;
+}
+</style>
+</head>
+<body>
+	<h1 id="he">Математический Тренажёр</h1>
+	<button id="menu" onclick=openmenu()></button>
+	<button id="in" onclick=opin()>Вход</button>
+	<div id="regfon">
+	</div>
+	<div id="openin">
+		<button id="hea" disabled>Войти или зарегистрироваться</button>
+		<button id="clhea" onclick=closehea()>X</button>
+		<div id="registr">
+			<input id="reg" placeholder="Имя пользователя">
+			<button id="butreg">Создать аккаунт</button>
+		</div>
+		<input id="vhod" placeholder="Имя пользователя">
+		<button id="butvh">Войти в аккаунт</button>
+	</div>
+	<div id="polzov">
+		<div id="profile">
+			<img src="pushin.jpg" id="push">
+			<button></button>
+		</div>
+		<div id="me">
+			<button id="one" onclick=first()>Линейные уравнения</button>
+			<button id="two" onclick=second()>Квадратные уравнения</button>
+			<button id="three" onclick=third()>Рациональные уравнения</button>
+			<button id="four" onclick=fourth()>Иррациональные уравнения</button>
+		</div>
+	</div>
+    <div id="user">
+        <p id="que"></p>
+        <input type="text" id="answer" placeholder="Ответ">
+        <button id="proverka" onclick=otvet()>Проверить</button> 
+		<button id="new" onclick=nwyr()>Новое уравнение</button>
+        <p id="result">Если корней несколько, введите их через запятую в порядке возрастания, а десятичные числа вводите с точкой.</p>
+    </div>
+<script>
+	Myotve = {
+		otve: 0
+	};
+	j = 1;
+	first();
+	document.getElementById('menu').style.background = 'url("stroff.png")';
+	function opin(){
+		document.getElementById('openin').style.display = 'block';
+		document.getElementById('regfon').style.display = 'block';
+	}
+	function closehea(){
+		document.getElementById('openin').style.display = 'none';
+		document.getElementById('regfon').style.display = 'none';
+		document.getElementById('reg').value = '';
+		document.getElementById('vhod').value = '';
+	}
+	function openmenu(){
+		if (document.getElementById('polzov').style.display == 'block'){
+			document.getElementById('user').style.left = '3%';
+			document.getElementById('he').style.left = '33%';
+			document.getElementById('polzov').style.display = 'none';
+			document.getElementById('menu').style.left = '0px';
+			document.getElementById('menu').style.background = 'url("stroff.png")';
+		}else{
+			document.getElementById('user').style.left = '18%';
+			document.getElementById('he').style.left = '41%';
+			document.getElementById('polzov').style.display = 'block';
+			document.getElementById('menu').style.left = '17.4%';
+			document.getElementById('menu').style.background = 'url("stron.png")';
+		}	
+	}
+	function otvet(x) {
+		if (Myotve.otve == 0){
+			if (x.length == 1){
+				Myotve.otve = x;
+			}else{
+				if (x[0] > x[1]){
+					Myotve.otve = x[1] + "," + x[0];
+				}else{
+					Myotve.otve = x[0] + "," + x[1];
+				}
+			}
+			return;
+		}
+		otv = document.getElementById('answer').value;
+		if (otv == Myotve.otve){
+			document.getElementById('result').textContent = "Правильно!";
+			Myotve.otve = 0;
+			setTimeout(nwyr, 1500);
+		}else if (otv != ""){
+			document.getElementById('result').textContent = "Неправильно!";
+		}
+		
+	}
+	function nwyr() {
+		document.getElementById('result').textContent = "Если корней несколько, введите их через запятую в порядке возрастания, а десятичные числа вводите с точкой.";
+		Myotve.otve = 0;
+		if (j == 1){
+			document.getElementById('answer').value = '';
+			first();
+		}else if (j == 2){
+			second();
+		}else if (j == 3){
+			third();
+		}else if (j == 4){
+			fourth();
+		}
+	}
+	function first() {
+		Myotve.otve = 0;
+		j = 1;
+		document.getElementById('one').style.color = 'black';
+		document.getElementById('two').style.color = 'white';
+		document.getElementById('three').style.color = 'white';
+		document.getElementById('four').style.color = 'white';
+		i = 1;
+		while (i > 0) {
+			if (Math.random() > 0.5){
+				a = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opa = "-";
+			}else{
+				a = Math.round(Math.random() * (10 - 1) + 1);
+				opa = "";
+			}
+			if (Math.random() > 0.5){
+				b = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opb = "-";
+			}else{
+				b = Math.round(Math.random() * (10 - 1) + 1);
+				opb = "+";
+			}
+			if (Math.random() > 0.5){
+				c = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opc = "-";
+			}else{
+				c = Math.round(Math.random() * (10 - 1) + 1);
+				opc = "";
+			}
+			if (Math.random() > 0.5){
+				d = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opd = "-";
+			}else{
+				d = Math.round(Math.random() * (10 - 1) + 1);
+				opd = "+";
+			}
+			if ((((d - b)/(a - c))*1000)%1 == 0 && ((d - b)/(a - c)) != 0){
+				x1 = (d - b)/(a - c);
+				x = [x1];
+				a = Math.abs(a);
+				b = Math.abs(b);
+				c = Math.abs(c);
+				d = Math.abs(d);
+				document.getElementById('que').innerHTML = opa + a + "x " + opb + " " + b + " = " + opc + "" + c + "x " + opd + " " + d;
+				otvet(x);
+				break;
+			}
+		}
+	}
+	function second() {
+		Myotve.otve = 0;
+		j = 2;
+		document.getElementById('one').style.color = 'white';
+		document.getElementById('two').style.color = 'black';
+		document.getElementById('three').style.color = 'white';
+		document.getElementById('four').style.color = 'white';
+		i = 1;
+		while (i > 0){
+			if (Math.random() > 0.5){
+				a = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opa = "-";
+			}else{
+				a = Math.round(Math.random() * (10 - 1) + 1);
+				opa = "";
+			}
+			if (Math.random() > 0.5){
+				b = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opb = "-";
+			}else{
+				b = Math.round(Math.random() * (10 - 1) + 1);
+				opb = "+";
+			}
+			if (Math.random() > 0.5){
+				c = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opc = "-";
+			}else{
+				c = Math.round(Math.random() * (10 - 1) + 1);
+				opc = "+";
+			}
+			D = b*b - 4*a*c;
+			if (Math.sqrt(D)%1 == 0 && D > 0){
+				x1 = (b*(-1) + Math.sqrt(D))/(2*a);
+				x2 = (b*(-1) - Math.sqrt(D))/(2*a);
+				if ((x1 * 1000)%1 == 0 && (x2 * 1000)%1 == 0) {
+					a = Math.abs(a);
+					b = Math.abs(b);
+					c = Math.abs(c);
+					document.getElementById('que').innerHTML = opa + a + "x^2 " + opb + " " + b + "x " + opc + " " + c + " = 0";
+					x = [x1, x2];
+					otvet(x);
+					break;
+				}
+			}
+		}
+	}
+	function third() {
+		Myotve.otve = 0;
+		j = 3;
+		document.getElementById('one').style.color = 'white';
+		document.getElementById('two').style.color = 'white';
+		document.getElementById('three').style.color = 'black';
+		document.getElementById('four').style.color = 'white';
+		i = 1;
+		while (i > 0) {
+			if (Math.random() > 0.5){
+				a = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opa = "-";
+			}else{
+				a = Math.round(Math.random() * (10 - 1) + 1);
+				opa = "";
+			}
+			if (Math.random() > 0.5){
+				b = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opb = "-";
+			}else{
+				b = Math.round(Math.random() * (10 - 1) + 1);
+				opb = "";
+			}
+			if (Math.random() > 0.5){
+				c = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opc = "-";
+			}else{
+				c = Math.round(Math.random() * (10 - 1) + 1);
+				opc = "+";
+			}
+			if (Math.random() > 0.5){
+				d = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opd = "-";
+			}else{
+				d = Math.round(Math.random() * (10 - 1) + 1);
+				opd = "";
+			}
+			x1 = (a - c*d)/(b*d);
+			if ((x1*1000)%1 == 0){
+				x = [x1];
+				a = Math.abs(a);
+				b = Math.abs(b);
+				c = Math.abs(c);
+				d = Math.abs(d);
+				document.getElementById('que').innerHTML = opa + a + " / (" + opb + "" + b + "x " + opc + " " + c + ")" + " = " + opd + "" + d;
+				otvet(x);
+				break;
+			}
+		}
+	}
+	function fourth() {
+		Myotve.otve = 0;
+		j = 4;
+		document.getElementById('one').style.color = 'white';
+		document.getElementById('two').style.color = 'white';
+		document.getElementById('three').style.color = 'white';
+		document.getElementById('four').style.color = 'black';
+		i = 1;
+		while (i > 0) {
+			if (Math.random() > 0.5){
+				a = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opa = "-";
+			}else{
+				a = Math.round(Math.random() * (10 - 1) + 1);
+				opa = "";
+			}
+			if (Math.random() > 0.5){
+				b = Math.round(Math.random() * (10 - 1) + 1) *(-1);
+				opb = "-";
+			}else{
+				b = Math.round(Math.random() * (10 - 1) + 1);
+				opb = "+";
+			}
+			c = Math.round(Math.random() * (10 - 1) + 1);
+			opc = "";
+			x1 = (c*c - b)/a
+			if ((x1*1000)%1 == 0){
+				x = [x1];
+				a = Math.abs(a);
+				b = Math.abs(b);
+				c = Math.abs(c);
+				document.getElementById('que').innerHTML = "√‎(" + opa + a + "x " + opb + " " + b + ") = " + opc + "" + c;
+				otvet(x);
+				break;
+			}
+		}
+	}
+</script>
+</body>
+</html>
